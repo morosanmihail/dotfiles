@@ -59,7 +59,7 @@ export MORROWIND_PATH='/mnt/bigdrive/SteamLibrary/steamapps/common/Morrowind/'
 eval "$(zoxide init --cmd cd zsh)"
 
 # Random PATH
-export PATH="$PATH:/home/mihail/.local/bin"
+export PATH="$PATH:/home/mihail/.local/bin:/home/mihail/bin"
 # Added by ProtonUp-Qt on 19-02-2024 20:40:48
 if [ -d "/home/mihail/stl/prefix" ]; then export PATH="$PATH:/home/mihail/stl/prefix"; fi
 
