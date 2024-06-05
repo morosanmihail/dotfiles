@@ -30,6 +30,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Keybindings
 bindkey '^f' autosuggest-accept
+bindkey '\e[1;5C' forward-word
+bindkey '\e[1;5D' backward-word
 
 # History
 HISTSIZE=5000
