@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Arc Dark Theme",
+    "vim.useCtrlKeys": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "files.insertFinalNewline": true,
+}
