@@ -4,4 +4,6 @@
     "git.autofetch": true,
     "git.enableSmartCommit": true,
     "files.insertFinalNewline": true,
+    "git.confirmSync": false,
+    "window.titleBarStyle": "custom"
 }
