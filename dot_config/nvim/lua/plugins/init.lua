@@ -7,7 +7,16 @@ return {
     end,
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "mrcjkb/rustaceanvim",
+    version = '^4',
+    lazy = false,
+    ft = {"rust"},
+    dependencies = "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.rustaceanvim"
+    end
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
