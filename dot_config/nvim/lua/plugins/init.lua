@@ -2,11 +2,8 @@ return {
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
+    opts = require "configs.conform",
   },
-
   {
     "mrcjkb/rustaceanvim",
     version = '^4',
@@ -17,10 +14,10 @@ return {
       require "configs.rustaceanvim"
     end
   },
+  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -36,24 +33,19 @@ return {
       require "configs.workspaces"
     end,
   },
-  --
-  -- {
-  -- 	"williamboman/mason.nvim",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"lua-language-server", "stylua",
-  -- 			"html-lsp", "css-lsp" , "prettier"
-  -- 		},
-  -- 	},
-  -- },
-  --
   {
   	"nvim-treesitter/nvim-treesitter",
   	opts = {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
-        "html", "css"
+       "html", "css"
   		},
   	},
+  },
+  {
+    "tpope/vim-fugitive",
+    config = function()
+      -- Optional configuration for Fugitive
+    end,
   },
 }
