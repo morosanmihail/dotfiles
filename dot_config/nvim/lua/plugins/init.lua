@@ -1,20 +1,29 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
+    keys = {
+      {
+        "<leader>fb",
+        function()
+          require("conform").format { async = true }
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
     opts = require "configs.conform",
   },
   {
     "mrcjkb/rustaceanvim",
-    version = '^4',
+    version = "^4",
     lazy = false,
-    ft = {"rust"},
+    ft = { "rust" },
     dependencies = "neovim/nvim-lspconfig",
     config = function()
       require "configs.rustaceanvim"
-    end
+    end,
   },
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -34,18 +43,63 @@ return {
     end,
   },
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+      },
+    },
   },
+  -- {
+  --   "tpope/vim-fugitive",
+  --   config = function()
+  --     -- Optional configuration for Fugitive
+  --   end,
+  -- },
   {
-    "tpope/vim-fugitive",
+    "tribela/transparent.nvim",
+    event = "VimEnter",
+    config = true,
+  },
+  -- {
+  --   "chrisgrieser/nvim-tinygit",
+  --   dependencies = {
+  --     "stevearc/dressing.nvim",
+  --     "nvim-telescope/telescope.nvim", -- optional, but recommended
+  --     "rcarriga/nvim-notify", -- optional, but recommended
+  --   },
+  -- },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+
+      -- Only one of these is needed.
+      "nvim-telescope/telescope.nvim", -- optional
+      "ibhagwan/fzf-lua", -- optional
+      "echasnovski/mini.pick", -- optional
+    },
     config = function()
-      -- Optional configuration for Fugitive
+      require "configs.neogit"
     end,
+    lazy = false,
+  },
+
+  {
+    "folke/trouble.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "folke/todo-comments.nvim",
+    },
+    opts = {},
+    keys = {
+      { "<leader>dd", "<cmd>Trouble<CR>", desc = "Open/close trouble list" },
+    },
+    lazy = false,
   },
 }
