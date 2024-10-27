@@ -18,6 +18,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light jeffreytse/zsh-vi-mode
 
 # load completions
 autoload -U compinit && compinit
@@ -46,11 +47,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Aliases
-alias ls='ls --color'
 
 # Nix
-# . /home/mihail/.nix-profile/etc/profile.d/nix.sh
+. /home/mihail/.nix-profile/etc/profile.d/nix.sh
 
 # Morrowind
 export MORROWIND_PATH='/mnt/bigdrive/SteamLibrary/steamapps/common/Morrowind/'
@@ -63,6 +62,8 @@ export PATH="$PATH:/home/mihail/.local/bin:/home/mihail/bin"
 # Added by ProtonUp-Qt on 19-02-2024 20:40:48
 if [ -d "/home/mihail/stl/prefix" ]; then export PATH="$PATH:/home/mihail/stl/prefix"; fi
 
+export EDITOR="nvim"
+
 # pnpm
 export PNPM_HOME="/home/mihail/.local/share/pnpm"
 case ":$PATH:" in
@@ -73,3 +74,7 @@ esac
 
 # fzf
 source <(fzf --zsh)
+
+# Aliases
+alias ls='eza'
+alias cat='bat'
