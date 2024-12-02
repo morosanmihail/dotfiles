@@ -49,7 +49,7 @@ setopt hist_find_no_dups
 
 
 # Nix
-. /home/mihail/.nix-profile/etc/profile.d/nix.sh
+# . /home/mihail/.nix-profile/etc/profile.d/nix.sh
 
 # Morrowind
 export MORROWIND_PATH='/mnt/bigdrive/SteamLibrary/steamapps/common/Morrowind/'
@@ -58,7 +58,7 @@ export MORROWIND_PATH='/mnt/bigdrive/SteamLibrary/steamapps/common/Morrowind/'
 eval "$(zoxide init --cmd cd zsh)"
 
 # Random PATH
-export PATH="$PATH:/home/mihail/.local/bin:/home/mihail/bin"
+export PATH="$PATH:/home/mihail/.local/bin:/home/mihail/bin:/home/mihail/.cargo/bin"
 # Added by ProtonUp-Qt on 19-02-2024 20:40:48
 if [ -d "/home/mihail/stl/prefix" ]; then export PATH="$PATH:/home/mihail/stl/prefix"; fi
 
