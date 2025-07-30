@@ -18,7 +18,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
-zinit light jeffreytse/zsh-vi-mode
+# zinit light jeffreytse/zsh-vi-mode
 
 # load completions
 autoload -U compinit && compinit
@@ -78,3 +78,9 @@ source <(fzf --zsh)
 # Aliases
 alias ls='eza'
 alias cat='bat'
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/mihail/.dart-cli-completion/zsh-config.zsh ]] && . /home/mihail/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

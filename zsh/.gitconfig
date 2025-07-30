@@ -1,0 +1,7 @@
+[user]
+	email = morosanmihail@outlook.com
+	name = Mihail Morosan
+[http]
+	lowSpeedLimit = 1000
+	lowSpeedTime = 60
+	postBuffer = 524288000
