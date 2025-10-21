@@ -64,6 +64,7 @@ if [ -d "/home/mihail/stl/prefix" ]; then export PATH="$PATH:/home/mihail/stl/pr
 
 export EDITOR="nvim"
 
+export SDL_VIDEO_FULLSCREEN_DISPLAY=0
 # pnpm
 export PNPM_HOME="/home/mihail/.local/share/pnpm"
 case ":$PATH:" in
