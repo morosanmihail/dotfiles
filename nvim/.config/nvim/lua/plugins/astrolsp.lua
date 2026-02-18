@@ -45,7 +45,16 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      rust_analyzer = {},
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = "dev" },
+              extraArgs = { "--profile", "rust-analyzer" },
+            },
+          },
+        },
+      },
       -- pylsp = {
       --   plugins = {
       --     jedi = {
