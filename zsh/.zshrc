@@ -27,7 +27,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
 bindkey '^f' autosuggest-accept
@@ -79,5 +79,6 @@ source <(fzf --zsh)
 # Aliases
 alias ls='eza'
 alias cat='bat'
+alias gg='lazygit'
 
 eval "$(starship init zsh)"
