@@ -26,6 +26,8 @@ map("n", "<leader>fT", "<cmd>TodoTelescope<cr>",           { desc = "Find TODOs"
 
 map("n", "<leader>gg", function() Snacks.lazygit() end, { desc = "Lazygit" })
 
+map({ "n", "t" }, "<F7>", function() Snacks.terminal.toggle() end, { desc = "Toggle terminal" })
+
 map("n", "<leader>/", "gcc",                        { desc = "Toggle comment", remap = true })
 map("v", "<leader>/", "gc",                         { desc = "Toggle comment", remap = true })
 

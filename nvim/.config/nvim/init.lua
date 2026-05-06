@@ -31,6 +31,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
+vim.lsp.enable('lua_ls')
+
 require("lazy").setup("plugins", {
   change_detection = { notify = false },
 })
