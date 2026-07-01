@@ -39,5 +39,3 @@ vim.lsp.enable("lua_ls")
 require("lazy").setup("plugins", {
   change_detection = { notify = false },
 })
-
--- require("oil").setup()
